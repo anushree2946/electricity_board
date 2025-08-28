@@ -1,0 +1,15 @@
+.table-container {
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  
+  .sticky-header {
+    
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
+  
+.date{
+    z-index: 9999999 !important;
+}
