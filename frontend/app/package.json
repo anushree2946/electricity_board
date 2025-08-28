@@ -1,4 +1,5 @@
 {
+  "homepage": "https://anushree2946.github.io/electricity_board_connection",
   "name": "app",
   "proxy":"http://127.0.0.1:8000/",
   "version": "0.1.0",
@@ -22,7 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [

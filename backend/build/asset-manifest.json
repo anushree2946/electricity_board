@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/electricity_board_connection/static/css/main.efbfc4a1.css",
+    "main.js": "/electricity_board_connection/static/js/main.dd914ad2.js",
+    "static/js/453.1a16ed4e.chunk.js": "/electricity_board_connection/static/js/453.1a16ed4e.chunk.js",
+    "index.html": "/electricity_board_connection/index.html",
+    "main.efbfc4a1.css.map": "/electricity_board_connection/static/css/main.efbfc4a1.css.map",
+    "main.dd914ad2.js.map": "/electricity_board_connection/static/js/main.dd914ad2.js.map",
+    "453.1a16ed4e.chunk.js.map": "/electricity_board_connection/static/js/453.1a16ed4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efbfc4a1.css",
+    "static/js/main.dd914ad2.js"
+  ]
+}

@@ -14,6 +14,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Count
 from django.db.models.functions import TruncMonth
 from django.contrib.auth import authenticate,login,logout
+from django.shortcuts import render
+
 # Create your views here.
 def index(request):
     return render(request,"index.html")
