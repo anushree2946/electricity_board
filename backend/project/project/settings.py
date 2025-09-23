@@ -29,9 +29,11 @@ INSTALLED_APPS = [
     'app',
 ]
 
+# PASTE THIS ENTIRE BLOCK
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',   # ✅ for serving static files in production
+    # WhiteNoise goes here
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -39,6 +41,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'project.urls'
 
@@ -62,12 +65,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'project.wsgi.application'
 
 
-# Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+iDATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600
+    )
 }
 
 # Password validation
@@ -85,11 +87,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    ...
-]
+
 
 
 # Internationalization
@@ -101,7 +99,7 @@ USE_TZ = True
 
 # ✅ Static files (React + Django)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "build" / "static"]   # React static files
+# STATICFILES_DIRS = [BASE_DIR / "build" / "static"]   # React static files
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # ✅ React templates folder (index.html)
